@@ -1,0 +1,6 @@
+target/
+dbt_packages/
+logs/
+.DS_Store
+# legacy -- renamed to dbt_packages in dbt v1
+dbt_modules/
