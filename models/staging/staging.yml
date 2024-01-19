@@ -19,3 +19,12 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: stg_game
+    description: "Staging model for NBA games"
+    columns:
+      - name: game_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null

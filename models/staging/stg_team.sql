@@ -1,12 +1,12 @@
 WITH team AS (
 
     SELECT * FROM {{ source('nba_basketball', '_airbyte_raw_team') }}
-)
+),
 
-, final AS (
+final AS (
 
     SELECT
-        (_airbyte_data -> 'team_id')::INT AS team_id,
+        (_airbyte_data -> 'team_id')::INTEGER AS team_id,
         (_airbyte_data -> 'team_name_abbreviation')::TEXT AS team_name_abbreviation,
         (_airbyte_data -> 'city')::TEXT AS city,
         (_airbyte_data -> 'conference')::TEXT AS conference,
