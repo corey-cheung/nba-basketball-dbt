@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: nba_basketball
+    database: nba_basketball
+    schema: main
+    tables:
+      - name: _airbyte_raw_team
+      - name: _airbyte_raw_player
+      - name: _airbyte_raw_game
+      - name: _airbyte_raw_box_score
