@@ -2,19 +2,19 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: stg_team
+    description: "Staging model for NBA teams"
     columns:
-      - name: id
+      - name: team_id
         description: "The primary key for this table"
         tests:
           - unique
           - not_null
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: stg_player
+    description: "Staging model for NBA players"
     columns:
-      - name: id
+      - name: player_id
         description: "The primary key for this table"
         tests:
           - unique
