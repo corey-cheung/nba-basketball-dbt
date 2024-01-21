@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: int_game
+    description: "Intermediate transformation model for NBA games: de-duping game_ids"
+    columns:
+      - name: game_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
