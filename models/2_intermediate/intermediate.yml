@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: int_game
+    description: "Intermediate transformation model for NBA games: de-duping game_ids"
+    columns:
+      - name: game_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: int_box_score
+    description: "Intermediate transformation model for NBA box score: de-duping box_score_ids"
+    columns:
+      - name: box_score_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
