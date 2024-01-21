@@ -2,10 +2,28 @@
 version: 2
 
 models:
-  - name: team
+  - name: dim_team
     description: "Mart table for NBA games"
     columns:
       - name: team_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_player
+    description: "Mart table for NBA players"
+    columns:
+      - name: player_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_game
+    description: "Mart table for NBA games"
+    columns:
+      - name: game_id
         description: "The primary key for this table"
         tests:
           - unique
