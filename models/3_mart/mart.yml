@@ -10,3 +10,21 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: player
+    description: "Mart table for NBA players"
+    columns:
+      - name: player_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: game
+    description: "Mart table for NBA games"
+    columns:
+      - name: game_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
