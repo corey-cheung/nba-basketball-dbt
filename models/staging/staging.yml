@@ -5,7 +5,7 @@ models:
   - name: stg_team
     description: "Staging model for NBA teams"
     columns:
-      - name: team_id
+      - name: airbyte_id
         description: "The primary key for this table"
         tests:
           - unique
@@ -14,7 +14,7 @@ models:
   - name: stg_player
     description: "Staging model for NBA players"
     columns:
-      - name: player_id
+      - name: airbyte_id
         description: "The primary key for this table"
         tests:
           - unique
@@ -23,7 +23,16 @@ models:
   - name: stg_game
     description: "Staging model for NBA games"
     columns:
-      - name: game_id
+      - name: airbyte_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_box_score
+    description: "Staging model for NBA box_scores"
+    columns:
+      - name: airbyte_id
         description: "The primary key for this table"
         tests:
           - unique

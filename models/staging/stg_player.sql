@@ -14,8 +14,7 @@ final AS (
         (_airbyte_data -> 'height_feet')::INTEGER AS height_feet,
         (_airbyte_data -> 'height_inches')::INTEGER AS height_inches,
         (_airbyte_data -> 'weight_pounds')::INTEGER AS weight_pounds,
-        _airbyte_ab_id,
-        _airbyte_emitted_at
+        {{ airbyte_raw_fields() }}
     FROM player
 )
 

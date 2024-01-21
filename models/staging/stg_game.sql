@@ -15,8 +15,7 @@ final AS (
         (_airbyte_data -> 'season')::INTEGER AS season,
         (_airbyte_data -> 'post_season')::BOOLEAN AS post_season,
         (_airbyte_data -> 'status')::TEXT AS status,
-        _airbyte_ab_id,
-        _airbyte_emitted_at
+        {{ airbyte_raw_fields() }}
     FROM game
 )
 

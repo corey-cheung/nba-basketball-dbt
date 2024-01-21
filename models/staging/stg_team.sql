@@ -13,8 +13,7 @@ final AS (
         (_airbyte_data -> 'division')::TEXT AS division,
         (_airbyte_data -> 'team_full_name')::TEXT AS team_full_name,
         (_airbyte_data -> 'team_name')::TEXT AS team_name,
-        _airbyte_ab_id,
-        _airbyte_emitted_at
+        {{ airbyte_raw_fields() }}
     FROM team
 )
 
