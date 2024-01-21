@@ -11,7 +11,7 @@ final AS (
         (_airbyte_data -> 'city')::TEXT AS city,
         (_airbyte_data -> 'conference')::TEXT AS conference,
         (_airbyte_data -> 'division')::TEXT AS division,
-        (_airbyte_data -> 'team_full_name')::TEXT AS team_full_name,
+        (_airbyte_data -> 'team_full_name')::TEXT AS team_name_full,
         (_airbyte_data -> 'team_name')::TEXT AS team_name,
         {{ airbyte_raw_fields() }}
     FROM team
