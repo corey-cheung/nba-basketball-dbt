@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: team
+  - name: dim_team
     description: "Mart table for NBA games"
     columns:
       - name: team_id
@@ -11,7 +11,7 @@ models:
           - unique
           - not_null
 
-  - name: player
+  - name: dim_player
     description: "Mart table for NBA players"
     columns:
       - name: player_id
@@ -20,7 +20,7 @@ models:
           - unique
           - not_null
 
-  - name: game
+  - name: fct_game
     description: "Mart table for NBA games"
     columns:
       - name: game_id

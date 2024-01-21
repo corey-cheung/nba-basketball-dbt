@@ -5,7 +5,7 @@ WITH player AS (
 
 team AS (
 
-    SELECT * FROM {{ ref('team') }}
+    SELECT * FROM {{ ref('dim_team') }}
 ),
 
 final AS (
