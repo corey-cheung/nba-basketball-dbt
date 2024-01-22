@@ -37,3 +37,12 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: fct_season_stats
+    description: "Mart table for NBA players' regular season stats"
+    columns:
+      - name: season_stats_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
