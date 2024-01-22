@@ -3,7 +3,7 @@ WITH box_score AS (
     SELECT * FROM {{ ref('stg_box_score') }}
 ),
 
-deduped AS (
+deduped AS ( -- airbyte connector for the duck db destination is append only
 
     SELECT
         box_score_id,

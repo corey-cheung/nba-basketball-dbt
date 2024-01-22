@@ -3,7 +3,7 @@ WITH game AS (
     SELECT * FROM {{ ref('stg_game') }}
 ),
 
-deduped AS (
+deduped AS ( -- airbyte connector for the duck db destination is append only
 
     SELECT
         game_id,
