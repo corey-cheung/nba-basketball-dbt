@@ -28,3 +28,12 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: fct_box_score
+    description: "Mart table for NBA box_scores"
+    columns:
+      - name: box_score_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
