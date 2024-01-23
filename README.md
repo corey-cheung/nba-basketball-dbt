@@ -1,10 +1,7 @@
 # nba-basketball-dbt-dbt
-The transformation part of an end-to-end data analytics pipeline using basketball data from the NBA.
 
+**The transformation part of an end-to-end data analytics pipeline using basketball data from the NBA.**
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Repository for the ingestion of NBA basketball data from the public [Ball don't lie API.](https://www.balldontlie.io/home.html#introduction) This repo is focussed on data transformation using [dbt-core] (https://docs.getdbt.com/docs/introduction) and [DuckDb.] (https://duckdb.org/)
+
+In the `nba-basketball-ingestion` repo, data is retrieved from a public API and ingested into a local Postgres database using Python scripting. Tables from Postgres are then ingested into DuckDb using [Airbyte.] (https://airbyte.com) Further downstream, the transformed data will be used for analysis & visualisation in the `nba-basketball-analytics` repo.

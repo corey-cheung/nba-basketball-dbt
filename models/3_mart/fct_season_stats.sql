@@ -29,7 +29,6 @@ season_stats AS (
         AVG(fg_pct) AS avg_fg_pct,
         AVG(ft_pct) AS avg_ft_pct,
         SUM(total_pts) OVER (PARTITION BY player_id ORDER BY season) AS career_pts,
-        SUM(total_pts) OVER (PARTITION BY player_id ORDER BY season) AS career_pts,
         SUM(total_reb) OVER (PARTITION BY player_id ORDER BY season) AS career_reb,
         SUM(total_ast) OVER (PARTITION BY player_id ORDER BY season) AS career_ast,
         SUM(total_blk) OVER (PARTITION BY player_id ORDER BY season) AS career_blk,
