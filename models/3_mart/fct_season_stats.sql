@@ -17,7 +17,11 @@ season_stats AS (
         SUM(ast) AS total_ast,
         SUM(blk) AS total_blk,
         SUM(stl) AS total_stl,
-        COUNT(DISTINCT game_id) AS total_games,
+        COUNT(
+            DISTINCT
+                CASE WHEN min IS NULL OR min IN ('0','00','0:00')
+                THEN NULL ELSE game_id END
+        ) AS total_games,
         SUM(turnover) AS total_turnover,
         AVG(pts) AS avg_pts,
         AVG(reb) AS avg_reb,
